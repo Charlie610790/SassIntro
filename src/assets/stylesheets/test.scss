@@ -1,3 +1,6 @@
+$blue: #224967;
+$pink: #df07f9;
+
 body{
     min-width: 960px;
 }
@@ -61,12 +64,12 @@ h1 {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  background: #fb0712;
+  background: $blue;
   width: 180px;
   height: 135px;
 
   &:hover {
-    background-color: #de04ff;
+    background-color: $pink;
     -webkit-transition: background-color 2s ease-out;
     -moz-transition: background-color 2s ease-out;
     -o-transition: background-color 2s ease-out;
