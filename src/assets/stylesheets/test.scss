@@ -85,20 +85,7 @@ h1 {
   @include animation-name (slidein);
 }
     
-@-moz-keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-      
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-
-}
-    
-@-webkit-keyframes slidein {
+@include keyframes (slidein) {
   from {
     margin-left: 100%;
     width: 300%;
@@ -118,58 +105,7 @@ h1 {
   @include animation-direction (alternate);
 }
 
-@-webkit-keyframes bouncing {
-  from {
-    margin-left: 52%;
-    margin-right: 0%;
-    width: 100%;
-    
-  }
-
-  to {
-    margin-left: 0%;
-    margin-right: 52%;
-    width: 100%;
-    
-  }
-
-}
-
-@-moz-keyframes bouncing {
-  from {
-    margin-left: 52%;
-    margin-right: 00%;
-    width: 100%;
-    
-  }
-
-  to {
-    margin-left: 0%;
-    margin-right: 52%;
-    width: 100%;
-    
-  }
-
-}
-    
-@-o-keyframes bouncing {
-  from {
-    margin-left: 52%;
-    margin-right: 0%;
-    width: 100%;
-    
-  }
-
-  to {
-    margin-left: 0%;
-    margin-right: 52%;
-    width: 100%;
-    
-  }
-
-}
-
-@keyframes bouncing {
+@include keyframes (bouncing) {
   from {
     margin-left: 52%;
     margin-right: 0%;
@@ -327,40 +263,7 @@ h1 {
   @include animation (fall 5s infinite);
 }
 
-@-webkit-keyframes fall {
-  from {
-    top: 0px;
-  }
-
-  to {
-    top: 200px;
-  }
-
-}
-
-@-moz-keyframes fall {
-  from {
-    top: 0px;
-  }
-
-  to {
-    top: 200px;
-  }
-
-}
-
-@-o-keyframes fall {
-  from {
-    top: 0px;
-  }
-
-  to {
-    top: 200px;
-  }
-
-}
-
-@keyframes fall {
+@include keyframes (fall) {
   from {
     top: 0px;
   }
@@ -411,52 +314,7 @@ h1 {
 
 }
 
-@-webkit-keyframes flash {
-  0% {
-    opacity: 1;
-  } 
-
-  50% {
-    opacity :0;
-  } 
-
-  100% {
-    opacity :1;
-  }
-
-}
-
-@-moz-keyframes flash {
-  0% {
-    opacity: 1;
-  } 
-
-  50% {
-    opacity :0;
-  } 
-
-  100% {
-    opacity :1;
-  }
-
-}
-
-@-o-keyframes flash {
-  0% {
-    opacity: 1;
-  } 
-
-  50% {
-    opacity :0;
-  } 
-
-  100% {
-    opacity :1;
-  }
-
-}
-
-@keyframes flash {
+@include keyframes (flash) {
   0% {
     opacity: 1;
   } 
@@ -470,41 +328,8 @@ h1 {
   }
 
 }
-    
-@-webkit-keyframes flashout {
-  from {
-    margin-left:42%;
-  }
-      
-  to {
-    margin-left:100%;
-  }
 
-}
-
-@-moz-keyframes flashout {
-  from {
-    margin-left:42%;
-  }
-      
-  to {
-    margin-left:100%;
-  }
-
-}
-
-@-o-keyframes flashout {
-  from {
-    margin-left:42%;
-  }
-      
-  to {
-    margin-left:100%;
-  }
-
-}
-
-@keyframes flashout {
+@include keyframes (flashout) {
   from {
     margin-left:42%;
   }
@@ -685,46 +510,7 @@ h1 {
 
 }
 
-@-webkit-keyframes diagnal {
-  from {
-    margin-top: 0;
-    margin-left: 0;
-  }
-
-  to {
-    margin-top: 180px;
-    margin-left: 180px;
-  }
-
-}
-
-@-moz-keyframes diagnal {
-  from {
-    margin-top: 0;
-    margin-left: 0;
-  }
-
-  to {
-    margin-top: 180px;
-    margin-left: 180px;
-  }
-
-}
-
-@-o-keyframes diagnal {
-  from {
-    margin-top: 0;
-    margin-left: 0;
-  }
-
-  to {
-    margin-top: 180px;
-    margin-left: 180px;
-  }
-
-}
-
-@keyframes diagnal {
+@include keyframes (diagnal) {
   from {
     margin-top: 0;
     margin-left: 0;
@@ -763,41 +549,8 @@ h1 {
   }
 
 }
-    
-@-webkit-keyframes slideout {
-  from {
-    margin-left:50px;
-  }
-      
-  to {
-    margin-left:150%;
-  }
 
-}
-
-@-moz-keyframes slideout {
-  from {
-    margin-left:50px;
-  }
-      
-  to {
-    margin-left:150%;
-  }
-
-}
-
-@-o-keyframes slideout {
-  from {
-    margin-left:50px;
-  }
-      
-  to {
-    margin-left:150%;
-  }
-
-}
-
-@keyframes slideout {
+@include keyframes (slideout) {
   from {
     margin-left:50px;
   }
@@ -826,178 +579,7 @@ h1 {
 
 }
 
-@-webkit-keyframes frog {
-  0% {
-    margin-top: 0px;
-  }
-
-  10% {
-    margin-top: 200px;
-    margin-left: 100px;
-  }
-
-  20% {
-    margin-top: 150px;
-    margin-left: 125px;
-  }
-
-  30% {
-    margin-top: 100px;
-    margin-left: 150px;
-  }
-
-  40% {
-    margin-top: 150px;
-    margin-left: 175px;
-  }
-
-  50% {
-    margin-top: 200;
-    margin-left: 200px;
-  }
-
-  60% {
-    margin-top: 150;
-    margin-left: 225px;
-  }
-
-  70% {
-    margin-top: 100;
-    margin-left: 250px;
-  }
-
-  80% {
-    margin-top: 150;
-    margin-left: 275px;
-  }
-
-  90% {
-    margin-top: 200;
-    margin-left: 300px;
-  }
-
-  100% {
-    margin-top: 150;
-    margin-left: 325px;
-  }
-
-}
-
-@-moz-keyframes frog {
-  0% {
-    margin-top: 0px;
-  }
-
-  10% {
-    margin-top: 200px;
-    margin-left: 100px;
-  }
-
-  20% {
-    margin-top: 150px;
-    margin-left: 125px;
-  }
-
-  30% {
-    margin-top: 100px;
-    margin-left: 150px;
-  }
-
-  40% {
-    margin-top: 150px;
-    margin-left: 175px;
-  }
-
-  50% {
-    margin-top: 200;
-    margin-left: 200px;
-  }
-
-  60% {
-    margin-top: 150;
-    margin-left: 225px;
-  }
-
-  70% {
-    margin-top: 100;
-    margin-left: 250px;
-  }
-
-  80% {
-    margin-top: 150;
-    margin-left: 275px;
-  }
-
-  90% {
-    margin-top: 200;
-    margin-left: 300px;
-  }
-
-  100% {
-    margin-top: 150;
-    margin-left: 325px;
-  }
-
-}
-
-@-o-keyframes frog {
-  0% {
-    margin-top: 0px;
-  }
-
-  10% {
-    margin-top: 200px;
-    margin-left: 100px;
-  }
-
-  20% {
-    margin-top: 150px;
-    margin-left: 125px;
-  }
-
-  30% {
-    margin-top: 100px;
-    margin-left: 150px;
-  }
-
-  40% {
-    margin-top: 150px;
-    margin-left: 175px;
-  }
-
-  50% {
-    margin-top: 200;
-    margin-left: 200px;
-  }
-
-  60% {
-    margin-top: 150;
-    margin-left: 225px;
-  }
-
-  70% {
-    margin-top: 100;
-    margin-left: 250px;
-  }
-
-  80% {
-    margin-top: 150;
-    margin-left: 275px;
-  }
-
-  90% {
-    margin-top: 200;
-    margin-left: 300px;
-  }
-
-  100% {
-    margin-top: 150;
-    margin-left: 325px;
-  }
-
-}
-
-@keyframes frog {
+@include keyframes (frog) {
   0% {
     margin-top: 0px;
   }
@@ -1085,60 +667,7 @@ h1 {
 
 }
 
-@-webkit-keyframes hover {
-  0% {
-    margin-top: 100px;
-  }
-
-  25% {
-    margin-top: 0px;
-  }
-
-  50% {
-    margin-top: 100px; 
-  }
-
-  75% {
-    margin-top: 0px; 
-  }
-
-  100% {
-    margin-top: 100px; 
-  }
-
-}
-
-@-moz-keyframes hover {
-  0% {
-    margin-top: 100px;
-  }
-
-  50% {
-    margin-top: 0px;
-  }
-
-  100% {
-    margin-top: 100px; 
-  }
-
-}
-
-@-o-keyframes hover {
-  0% {
-    margin-top: 100px;
-  }
-
-  50% {
-    margin-top: 0px;
-  }
-
-  100% {
-    margin-top: 100px; 
-  }
-
-}
-
-@keyframes hover {
+@include keyframes (hover) {
   0% {
     margin-top: 100px;
   }
@@ -1177,148 +706,7 @@ h1 {
   @include animation (clock 10s infinite);
 }
 
-@-webkit-keyframes clock {
-  0% {
-    background-image: url("/images/clock/00.png");
-  }
-  
-  10% {
-    background-image: url("/images/clock/01.png");
-  }
-
-  20% {
-    background-image: url("/images/clock/02.png");
-  }
-
-  30% {
-    background-image: url("/images/clock/03.png");
-  }
-
-  40% { 
-    background-image: url("/images/clock/04.png");
-  }
-
-  50% {
-    background-image: url("/images/clock/05.png");
-  }
-
-  60% {
-    background-image: url("/images/clock/06.png");
-  }
-
-  70% {
-    background-image: url("/images/clock/07.png");
-  }
-
-  80% {
-    background-image: url("/images/clock/08.png");
-  }
-
-  90% {
-    background-image: url("/images/clock/09.png");
-  }
-
-  100% {
-    background-image: url("/images/clock/10.png");
-  }
-
-}
-
-@-moz-keyframes clock {
-  0% {
-    background-image: url("/images/clock/00.png");
-  }
-  
-  10% {
-    background-image: url("/images/clock/01.png");
-  }
-
-  20% {
-    background-image: url("/images/clock/02.png");
-  }
-
-  30% {
-    background-image: url("/images/clock/03.png");
-  }
-
-  40% { 
-    background-image: url("/images/clock/04.png");
-  }
-
-  50% {
-    background-image: url("/images/clock/05.png");
-  }
-
-  60% {
-    background-image: url("/images/clock/06.png");
-  }
-
-  70% {
-    background-image: url("/images/clock/07.png");
-  }
-
-  80% {
-    background-image: url("/images/clock/08.png");
-  }
-
-  90% {
-    background-image: url("/images/clock/09.png");
-  }
-
-  100% {
-    background-image: url("/images/clock/10.png");
-  }
-
-}
-
-@-o-keyframes clock {
-  0% {
-    background-image: url("/images/clock/00.png");
-  }
-  
-  10% {
-    background-image: url("/images/clock/01.png");
-  }
-
-  20% {
-    background-image: url("/images/clock/02.png");
-  }
-
-  30% {
-    background-image: url("/images/clock/03.png");
-  }
-
-  40% { 
-    background-image: url("/images/clock/04.png");
-  }
-
-  50% {
-    background-image: url("/images/clock/05.png");
-  }
-
-  60% {
-    background-image: url("images/clock/06.png");
-  }
-
-  70% {
-    background-image: url("/images/clock/07.png");
-  }
-
-  80% {
-    background-image: url("/images/clock/08.png");
-  }
-
-  90% {
-    background-image: url("/images/clock/09.png");
-  }
-
-  100% {
-    background-image: url("/images/clock/10.png");
-  }
-
-}
-
-@keyframes clock {
+@include keyframes (clock) {
   0% {
     background-image: url("/images/clock/00.png");
   }
@@ -1397,64 +785,7 @@ h1 {
 
 }
 
-@-webkit-keyframes rock {
-  0% {
-    -webkit-transform: rotate(20deg);
-    -webkit-transform: 0.5s ease-in;
-
-    }
-
-  50% {
-    -webkit-transform: rotate(-20deg);
-    -webkit-transform: 0.5s ease-in;
-    }
-
-  100% {
-    -webkit-transform: rotate(10deg);
-    -webkit-transform: 0.5s ease-in;
-  }
-
-}
-
-@-moz-keyframes rock {
-  0% {
-    -moz-transform: rotate(20deg);
-    -moz-transform: 0.5s ease-in;
-
-    }
-
-  50% {
-    -moz-transform: rotate(-20deg);
-    -moz-transform: 0.5s ease-in;
-    }
-
-  100% {
-    -moz-transform: rotate(10deg);
-    -moz-transform: 0.5s ease-in;
-  }
-
-}
-
-@-o-keyframes rock {
-  0% {
-    -o-transform: rotate(20deg);
-    -o-transform: 0.5s ease-in;
-
-    }
-
-  50% {
-    -o-transform: rotate(-20deg);
-    -o-transform: 0.5s ease-in;
-    }
-
-  100% {
-    -o-transform: rotate(10deg);
-    -o-transform: 0.5s ease-in;
-  }
-
-}
-
-@keyframes rock {
+@include keyframes (rock) {
   0% {
     transform: rotate(20deg);
     transform: 0.5s ease-in;
@@ -1487,104 +818,8 @@ h1 {
   }
 
 }
-  
-@-webkit-keyframes imageshrink {
-  0% {
-    width: 500px;
-    height: 500px;
-  }
 
-  25% {
-    background-size: 400px 400px;
-    width: 400px;
-    height: 400px;
-  }
-
-  50% {
-    background-size: 300px 300px;
-    width: 300px;
-    height: 300px;
-    }
-
-  75% {
-    background-size: 200px 200px; 
-    width: 200px;
-    height: 200px;
-  }
-
-  100% {
-    background-size: 100px 100px;
-    width: 100px;
-    height: 100px;
-  }
-
-}
-
-@-moz-keyframes imageshrink {
-  0% {
-    width: 500px;
-    height: 500px;
-  }
-
-  25% {
-    background-size: 400px 400px;
-    width: 400px;
-    height: 400px;
-  }
-
-  50% {
-    background-size: 300px 300px;
-    width: 300px;
-    height: 300px;
-    }
-
-  75% {
-    background-size: 200px 200px; 
-    width: 200px;
-    height: 200px;
-  }
-
-  100% {
-    background-size: 100px 100px;
-    width: 100px;
-    height: 100px;
-  }
-
-}
-
-@-o-keyframes imageshrink {
-  0% {
-    width: 500px;
-    height: 500px;
-  }
-
-  25% {
-    background-size: 400px 400px;
-    width: 400px;
-    height: 400px;
-  }
-
-  50% {
-    background-size: 300px 300px;
-    width: 300px;
-    height: 300px;
-    }
-
-  75% {
-    background-size: 200px 200px; 
-    width: 200px;
-    height: 200px;
-  }
-
-  100% {
-    background-size: 100px 100px;
-    width: 100px;
-    height: 100px;
-  }
-
-}
-
-@keyframes imageshrink {
+@include keyframes (imageshrink) {
   0% {
     width: 500px;
     height: 500px;
