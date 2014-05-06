@@ -29,10 +29,7 @@ h1 {
 	line-height: 42px;
 	border-radius: 8px;
 	box-shadow: inset 0px -6px 00px black;
-	-webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-	transition: all 0.1s;
+	@include transition (all 0.1s);
 
   &:hover {
     margin-top: 23px;
@@ -73,23 +70,14 @@ h1 {
 
   &:hover {
     background-color: $pink;
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    -o-transition: background-color 2s ease-out;
-    transition: background-color 2s ease-out;
+    @include transition (background-color 2s ease-out);
   }
 
 }
 
 .righttoleft {
-  -webkit-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  -o-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-name: slidein;
-  -moz-animation-name: slidein;
-  -o-animation-name: slidein;
-  animation-name: slidein;
+  @include animation-duration (3s);
+  @include animation-name (slidein);
 }
     
 @-moz-keyframes slidein {
@@ -119,22 +107,10 @@ h1 {
 }
 
 .bouncing {
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-name: bouncing;
-  -moz-animation-name: bouncing;
-  -o-animation-name: bouncing;
-  animation-name: bouncing;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  -moz-animation-direction: alternate;
-  -o-animation-direction: alternate;
-  animation-direction: alternate;
+  @include animation-duration (1s);
+  @include animation-name (bouncing);
+  @include animation-iteration-count (infinite);
+  @include animation-direction (alternate);
 }
 
 @-webkit-keyframes bouncing {
@@ -212,10 +188,7 @@ h1 {
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  @include transition (all 1s);
 
   &:active {
     background: $black;
@@ -231,19 +204,13 @@ h1 {
   background-size: cover;
   width: 100px; 
   height: 100px;
-  -webkit-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
-  -moz-transition: width 2s, height 2s, background-image 2s, -moz-transform 2s, margin-left 2s;
-  -o-transition: width 2s, height 2s, background-image 2s, -o-transform 2s, margin-left 2s;
-  transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
+  @include transition (width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s);
 
   &:active {
     background-image: url("/images/madagascar.png");
     width: 200px; 
     height: 200px;
-    -webkit-transform: rotate(2890deg);
-    -moz-transform: rotate(2890deg);
-    -o-transform: rotate(2890deg);
-    transform: rotate(2890deg);
+    @include transform (rotate(2890deg));
   }
 
 }
@@ -255,10 +222,7 @@ h1 {
   width: 160px; 
   height: 170px;
   border: 0px solid rgba(0, 0, 0, 0.7);
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  transition: all 2s ease;
+  @include transition (all 2s ease);
 
   &:hover {
     position: relative;
@@ -275,18 +239,9 @@ h1 {
   background-color: $black;
   width: 370px;
   height: 300px;
-  -webkit-transition: all           1s   linear,
+  @include transition (all           1s   linear,
               width         1s   ease,
-              background    1s   ease;
-  -moz-transition: all           1s   linear,
-              width         1s   ease,
-              background    1s   ease;
-  -o-transition: all           1s   linear,
-              width         1s   ease,
-              background    1s   ease;
-  transition: all           1s   linear,
-              width         1s   ease,
-              background    1s   ease;
+              background    1s   ease);
 }
  
 .chart {
@@ -296,38 +251,26 @@ h1 {
   margin-right: 20px;
   width: 80px;
   height: 0px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  @include transition (all 1s ease);
 }
 
 .graph .small {
   background: white;
   height: 10px;
-  -webkit-transition: all 10 ease;
-  -moz-transition: all 10 ease;
-  -o-transition: all 10 ease;
-  transition: all 10 ease;
+  @include transition (all 10 ease);
   
 }
  
 .graph .medium {
   background: blue;
   height: 10px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  @include transition (all 1s ease);
 }
  
 .graph .large {
   background: yellow;
   height: 10px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  @include transition (all 1s ease);
 }
  
 .graph:hover .small {
@@ -356,20 +299,14 @@ h1 {
   background-size: cover;
   width: 100px; 
   height: 100px;
-  -webkit-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
-  -moz-transition: width 2s, height 2s, background-image 2s, -moz-transform 2s, margin-left 2s;
-  -o-transition: width 2s, height 2s, background-image 2s, -o-transform 2s, margin-left 2s;
-  transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
+  @include transition (width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s);
 
   &:active {
     margin-left: 75%;
     background-image: url("/images/madagascar.png");
     width: 200px; 
     height: 200px;
-    -webkit-transform: rotate(2890deg);
-    -moz-transform: rotate(2890deg);
-    -o-transform: rotate(2890deg);
-    transform: rotate(2890deg);
+    @include transform (rotate(2890deg));
     }
 
 }
@@ -382,10 +319,7 @@ h1 {
   background-size: cover;
   width:200px;
   height:150px;
-  -webkit-animation: fall 5s infinite; 
-  -moz-animation: fall 5s infinite; 
-  -o-animation: fall 5s infinite; 
-  animation: fall 5s infinite;
+  @include animation (fall 5s infinite);
 }
 
 @-webkit-keyframes fall {
@@ -440,10 +374,7 @@ h1 {
   border-bottom: 60px solid #224967;
   width: 0px; 
   height: 0px; 
-  -webkit-transition: all 3s;
-  -moz-transition: all 3s;
-  -o-transition: all 3s;
-  transition: all 3s;
+  @include transition (all 3s);
 
   &:hover {
     background-color: #479fe2;
@@ -463,23 +394,14 @@ h1 {
     margin-left: auto;  
     margin-right: auto;
     background-image: url("/images/flash.jpg");
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-    -webkit-animation: flash normal .3s infinite ease-in-out;
-    -moz-animation: flash normal .3s infinite ease-in-out;
-    -o-animation: flash normal .3s infinite ease-in-out;
-    animation: flash normal .3s infinite ease-in-out;
+    @include transition (all 1s ease-in-out);
+    @include animation (flash normal .3s infinite ease-in-out);
   }
 
   &:active {
     margin-left: 100%;  
     background-image: url("/images/flash.jpg");
-    -webkit-animation-name: flashout;
-    -moz-animation-name: flashout;
-    -o-animation-name: flashout;
-    animation-name: flashout;
+    @include animation-name (flashout);
   }
 
 }
@@ -599,19 +521,13 @@ h1 {
   &:hover {
     width: 780px; 
     height: 280px;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    @include transition (all 1s ease-in-out);
   }
   
   &:active {
     width: 780px; 
     height: 780px;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    @include transition (all 1s ease-in-out);
   }
 
 }
@@ -621,23 +537,14 @@ h1 {
   margin-right: auto;
   width: 400px;
   height: 200px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  @include transition (all 1s ease);
 
   &:hover {
-    -webkit-filter: #{'grayscale(100%)'};
-    -moz-filter: #{'grayscale(100%)'};
-    -o-filter: #{'grayscale(100%)'};
-    filter: #{'grayscale(100%)'};
+    @include filter (#{'grayscale(100%)'});
   }
 
   &:active {
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    filter: blur(2px);
+    @include filter (blur(2px));
   }
 
 }
@@ -651,73 +558,43 @@ h1 {
   }
 
   &:hover .c {
-    -webkit-animation: 1s .5s;
-    -moz-animation: 1s .5s;
-    -o-animation: 1s .5s;
-    animation: 1s .5s;
+    @include animation (1s .5s);
   }
 
   &:hover .o {
-    -webkit-animation: 1s .7s;
-    -moz-animation: 1s .7s;
-    -o-animation: 1s .7s;
-    animation: 1s .7s;
+    @include animation (1s .7s);
   }
 
   &:hover .l {
-    -webkit-animation: 1s .9s;
-    -moz-animation: 1s .9s;
-    -o-animation: 1s .9s;
-    animation: 1s .9s;
+    @include animation (1s .9s);
   }
 
   &:hover .oo {
-    -webkit-animation: 1s 1.1s;
-    -moz-animation: 1s 1.1s;
-    -o-animation: 1s 1.1s;
-    animation: 1s 1.1s;
+    @include animation (1s 1.1s);
   }
 
   &:hover .r {
-    -webkit-animation: 1s 1.3s;
-    -moz-animation: 1s 1.3s;
-    -o-animation: 1s 1.3s;
-    animation: 1s 1.3s;
+    @include animation (1s 1.3s);
   }
 
   &:hover .f {
-    -webkit-animation: 1s 1.7s;
-    -moz-animation: 1s 1.7s;
-    -o-animation: 1s 1.7s;
-    animation: 1s 1.7s;
+    @include animation (1s 1.7s);
   }
 
   &:hover .a {
-    -webkit-animation: 1s 1.9s;
-    -moz-animation: 1s 1.9s;
-    -o-animation: 1s 1.9s;
-    animation: 1s 1.9s;
+    @include animation (1s 1.9s);
   }
 
   &:hover .d {
-    -moz-animation: 1s 1.9s;
-    -o-animation: 1s 1.9s;
-    -webkit-animation: 1s 1.9s;
-    animation: 1s 1.9s;
+    @include animation (1s 1.9s);
   }
 
   &:hover .e {
-    -webkit-animation: 1s 2.1s;
-    -moz-animation: 1s 2.1s;
-    -o-animation: 1s 2.1s;
-    animation: 1s 2.1s;
+    @include animation (1s 2.1s);
   }
 
   &:hover .period {
-    -webkit-animation: 1s 2.3s;
-    -moz-animation: 1s 2.3s;
-    -o-animation: 1s 2.3s;
-    animation: 1s 2.3s;
+    @include animation (1s 2.3s);
   }
   
 }
@@ -725,55 +602,37 @@ h1 {
 .c {
   display: inline-block;
   font-size: 150px;
-  -webkit-transition: 1s .5s;
-  -moz-transition: 1s .5s;
-  -o-transition: 1s .5s;
-  transition: 1s .5s;
+  @include transition (1s .5s);
 }
 
 .o {
   display: inline-block;
   font-size: 150px;
-  -webkit-transition: 1s .7s;
-  -moz-transition: 1s .7s;
-  -o-transition: 1s .7s;
-  transition: 1s .7s;
+  @include transition (1s .7s);
 }
 
 .l {
   display: inline-block;
   font-size: 150px;
-  -webkit-transition: 1s .9s;
-  -moz-transition: 1s .9s;
-  -o-transition: 1s .9s;
-  transition: 1s .9s;
+  @include transition (1s .9s);
 }
 
 .oo {
   display: inline-block;
   font-size: 150px;
-  -webkit-transition: 1s 1.1s;
-  -moz-transition: 1s 1.1s;
-  -o-transition: 1s 1.1s;
-  transition: 1s 1.1s;
+  @include transition (1s 1.1s);
 }
 
 .r {
   display: inline-block;
   font-size: 150px;
-  -webkit-transition: 1s 1.3s;
-  -moz-transition: 1s 1.3s;
-  -o-transition: 1s 1.3s;
-  transition: 1s 1.3s;
+  @include transition (1s 1.3s);
 }
 
 .f {
   display: inline-block;
   font-size: 150px;
-  -webkit-transition: 1s 1.7s;
-  -moz-transition: 1s 1.7s;
-  -o-transition: 1s 1.7s;
-  transition: 1s 1.7s;
+  @include transition (1s 1.7s);
 }
 
 .space {
@@ -784,37 +643,25 @@ h1 {
 .a {
   display: inline-block;
   font-size: 150px;
-  -webkit-transition: 1s 1.9s;
-  -moz-transition: 1s 1.9s;
-  -o-transition: 1s 1.9s;
-  transition: 1s 1.9s;
+  @include transition (1s 1.9s);
 }
 
 .d {
   display: inline-block;
   font-size: 150px;
-  -webkit-transition: 1s 1.9s;
-  -moz-transition: 1s 1.9s;
-  -o-transition: 1s 1.9s;
-  transition: 1s 1.9s;
+  @include transition (1s 1.9s);
 }
 
 .e {
   display: inline-block;
   font-size: 150px;
-  -webkit-transition: 1s 2.1s;
-  -moz-transition: 1s 2.1s;
-  -o-transition: 1s 2.1s;
-  transition: 1s 2.1s;
+  @include transition (1s 2.1s);
 }
 
 .period {
   display: inline-block;
   font-size: 150px;
-  -webkit-transition: 1s 2.3s;
-  -moz-transition: 1s 2.3s;
-  -o-transition: 1s 2.3s;
-  transition: 1s 2.3s;
+  @include transition (1s 2.3s);
 }
 
 .diagnal {
@@ -823,21 +670,12 @@ h1 {
   font-size: 75px;
   font-family: arial;
   text-align: center;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  @include transition (1s);
 
   &:active {
     color: red;
-    -webkit-animation-name: diagnal;
-    -moz-animation-name: diagnal;
-    -o-animation-name: diagnal;
-    animation-name: diagnal;
-    -webkit-animation-duration: 3s;
-    -moz-animation-duration: 3s;
-    -o-animation-duration: 3s;
-    animation-duration: 3s;
+    @include animation-name (diagnal);
+    @include animation-duration (3s);
   }
 
 }
@@ -907,10 +745,7 @@ h1 {
   background-size:100px 70px;
   height: 70px;
   width: 100px;
-  -webkit-transition: all ease-out;
-  -moz-transition: all ease-out;
-  -o-transition: all ease-out;
-  transition: all ease-out;
+  @include transition (all ease-out);
 
   &:active {
     background-image: url("/images/rocket.jpg");
@@ -918,14 +753,8 @@ h1 {
     width: 100%;
     max-height: 70px;
     max-width: 200px;
-    -webkit-animation-duration: 3s;
-    -moz-animation-duration: 3s;
-    -o-animation-duration: 3s;
-    animation-duration: 3s;
-    -webkit-animation-name: slideout;
-    -moz-animation-name: slideout;
-    -o-animation-name: slideout;
-    animation-name: slideout;  
+    @include animation-duration (3s);
+    @include animation-name (slideout);  
   }
 
 }
@@ -983,17 +812,11 @@ h1 {
   background-size: 100px 100px;
   height: 100px;
   width: 100px;
-  -webkit-transition: ease;
-  -moz-transition: ease;
-  -o-transition: ease;
-  transition: ease;
+  @include transition (ease);
 
   &:active {
     background-image: url("/images/frogdown.jpg");
-    -webkit-animation: frog 1s infinite;
-    -moz-animation: frog 1s infinite;
-    -o-animation: frog 1s infinite;
-    animation: frog 1s infinite;
+    @include animation (frog 1s infinite);
   }
 
 }
@@ -1233,10 +1056,7 @@ h1 {
   background-size: 350px 200px;
   width: 350px;
   height: 200px;
-  -webkit-transition: all 2s;
-  -moz-transition: all 2s;
-  -o-transition: all 2s;
-  transition: all 2s;
+  @include transition (all 2s);
 
   &:hover {
     background-size: 1150px 800px;
@@ -1248,23 +1068,14 @@ h1 {
   margin: 0 auto;
   width: 400px;
   height: 400px;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  @include transition (all 1s ease-in-out);
 }
 
 .hoverinside {
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  @include transition (all 1s ease-in-out);
 
   &:hover {
-    -webkit-animation: hover 3s infinite;
-    -moz-animation: hover 3s infinite;
-    -o-animation: hover 3s infinite;
-    animation: hover 3s infinite;
+    @include animation (hover 3s infinite);
   }
 
 }
@@ -1344,10 +1155,7 @@ h1 {
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  transition: all 2s ease;
+  @include transition (all 2s ease);
 
   &:hover {
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 1);
@@ -1361,10 +1169,7 @@ h1 {
   background-image: url("/images/clock/00.png");
   width: 250px;
   height: 240px;
-  -webkit-animation: clock 10s infinite;
-  -moz-animation: clock 10s infinite;
-  -o-animation: clock 10s infinite;
-  animation: clock 10s infinite;
+  @include animation (clock 10s infinite);
 }
 
 @-webkit-keyframes clock {
@@ -1562,10 +1367,7 @@ h1 {
   background-size: 379px 202px;
   height: 202px;
   width: 379px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  @include transition (all 1s ease);
 
   &:hover {
     background-image: url("/images/bumblebee.jpg");
@@ -1585,10 +1387,7 @@ h1 {
   width: 198px;
 
   &:hover {
-    -webkit-animation: rock 1s infinite;
-    -moz-animation: rock 1s infinite;
-    -o-animation: rock 1s infinite;
-    animation: rock 1s infinite;
+    @include animation (rock 1s infinite);
   }
 
 }
@@ -1676,16 +1475,10 @@ h1 {
   background-size: 500px 500px;
   width: 500px;
   height: 500px;
-  -webkit-transform: all 3s ease-in;
-  -moz-transform: all 3s ease-in;
-  -o-transform: all 3s ease-in;
-  transform: all 3s ease-in;
+  @include transform (all 3s ease-in);
 
   &:hover {
-    -webkit-animation: imageshrink 1s infinite;
-    -moz-animation: imageshrink 1s infinite;
-    -o-animation: imageshrink 1s infinite;
-    animation: imageshrink 1s infinite;
+    @include animation (imageshrink 1s infinite);
   }
 
 }
@@ -1856,10 +1649,7 @@ h1 {
   background-size: 500px 424px;
   width: 500px;
   height: 424px;
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  transition: all 2s ease;
+  @include transition (all 2s ease);
 
   &:hover {
     background-image: url("/images/fuckthisshit.gif");
