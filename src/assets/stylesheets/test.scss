@@ -612,20 +612,21 @@ h1 {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
-}
 
-.blackandwhite:hover {
-  -webkit-filter: #{'grayscale(100%)'};
-  -moz-filter: #{'grayscale(100%)'};
-  -o-filter: #{'grayscale(100%)'};
-  filter: #{'grayscale(100%)'};
-}
+  &:hover {
+    -webkit-filter: #{'grayscale(100%)'};
+    -moz-filter: #{'grayscale(100%)'};
+    -o-filter: #{'grayscale(100%)'};
+    filter: #{'grayscale(100%)'};
+  }
 
-.blackandwhite:active {
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  filter: blur(2px);
+  &:active {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    filter: blur(2px);
+  }
+
 }
 
 .colorfade {
@@ -817,18 +818,19 @@ h1 {
   -moz-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-}
 
-.diagnal:active {
-  color: red;
-  -webkit-animation-name: diagnal;
-  -moz-animation-name: diagnal;
-  -o-animation-name: diagnal;
-  animation-name: diagnal;
-  -webkit-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  -o-animation-duration: 3s;
-  animation-duration: 3s;
+  &:active {
+    color: red;
+    -webkit-animation-name: diagnal;
+    -moz-animation-name: diagnal;
+    -o-animation-name: diagnal;
+    animation-name: diagnal;
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s;
+  }
+
 }
 
 @-webkit-keyframes diagnal {
@@ -900,22 +902,23 @@ h1 {
   -moz-transition: all ease-out;
   -o-transition: all ease-out;
   transition: all ease-out;
-}
 
-.rocketship:active {
-  background-image: url("/images/rocket.jpg");
-  background-size:200px 70px;
-  width: 100%;
-  max-height: 70px;
-  max-width: 200px;
-  -webkit-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  -o-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-name: slideout;
-  -moz-animation-name: slideout;
-  -o-animation-name: slideout;
-  animation-name: slideout;   
+  &:active {
+    background-image: url("/images/rocket.jpg");
+    background-size:200px 70px;
+    width: 100%;
+    max-height: 70px;
+    max-width: 200px;
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-name: slideout;
+    -moz-animation-name: slideout;
+    -o-animation-name: slideout;
+    animation-name: slideout;  
+  }
+
 }
     
 @-webkit-keyframes slideout {
@@ -972,17 +975,18 @@ h1 {
   height: 100px;
   width: 100px;
   -webkit-transition: ease;
-  -moz--transition: ease;
-  -o--transition: ease;
+  -moz-transition: ease;
+  -o-transition: ease;
   transition: ease;
-}
 
-.frog:active {
-  background-image: url("/images/frogdown.jpg");
-  -webkit-animation: frog 1s infinite;
-  -moz-animation: frog 1s infinite;
-  o-animation: frog 1s infinite;
-  animation: frog 1s infinite;
+  &:active {
+    background-image: url("/images/frogdown.jpg");
+    -webkit-animation: frog 1s infinite;
+    -moz-animation: frog 1s infinite;
+    -o-animation: frog 1s infinite;
+    animation: frog 1s infinite;
+  }
+
 }
 
 @-webkit-keyframes frog {
@@ -1224,10 +1228,11 @@ h1 {
   -moz-transition: all 2s;
   -o-transition: all 2s;
   transition: all 2s;
-}
 
-.imgzoom:hover {
-  background-size: 1150px 800px;
+  &:hover {
+    background-size: 1150px 800px;
+  }
+
 }
 
 .hover {
@@ -1235,18 +1240,25 @@ h1 {
   margin-bottom: 250px;
   width: 400px;
   height: 400px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
-.hoverinside:hover{
-  margin: 0 auto;
-  -webkit-animation: hover 3s infinite;
-  -moz-animation: hover 3s infinite;
-  -o-animation: hover 3s infinite;
-  animation: hover 3s infinite;
+.hoverinside {
+  -webkit-animation: hover 1s infinite;
+  -moz-animation: hover 1s infinite;
+  -o-animation: hover 1s infinite;
+  animation: hover 1s infinite;
+
+  &:hover {
+    -webkit-animation: hover 1s infinite;
+    -moz-animation: hover 1s infinite;
+    -o-animation: hover 1s infinite;
+    animation: hover 1s infinite;
+  }
+
 }
 
 @-webkit-keyframes hover {
@@ -1320,10 +1332,11 @@ h1 {
   -moz-transition: all 2s ease;
   -o-transition: all 2s ease;
   transition: all 2s ease;
-}
 
-.circleshadow:hover {
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 1);
+  &:hover {
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 1);
+  }
+
 }
 
 .clock {
@@ -1537,13 +1550,14 @@ h1 {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
-}
 
-.transformer:hover {
-  background-image: url("/images/bumblebee.jpg");
-  background-size: 258px 348px;
-  height: 348px;
-  width: 258px;
+  &:hover {
+    background-image: url("/images/bumblebee.jpg");
+    background-size: 258px 348px;
+    height: 348px;
+    width: 258px;
+  }
+
 }
 
 .rockingchair {
@@ -1553,13 +1567,14 @@ h1 {
   background-size:197px 198px;
   height: 197px;
   width: 198px;
-}
 
-.rockingchair:hover {
-  -webkit-animation: rock 1s infinite;
-  -moz-animation: rock 1s infinite;
-  -o-animation: rock 1s infinite;
-  animation: rock 1s infinite;
+  &:hover {
+    -webkit-animation: rock 1s infinite;
+    -moz-animation: rock 1s infinite;
+    -o-animation: rock 1s infinite;
+    animation: rock 1s infinite;
+  }
+
 }
 
 @-webkit-keyframes rock {
@@ -1649,13 +1664,14 @@ h1 {
   -moz-transform: all 3s ease-in;
   -o-transform: all 3s ease-in;
   transform: all 3s ease-in;
-}
 
-.imageshrink:hover{
-  -webkit-animation: imageshrink 1s infinite;
-  -moz-animation: imageshrink 1s infinite;
-  -o-animation: imageshrink 1s infinite;
-  animation: imageshrink 1s infinite;
+  &:hover {
+    -webkit-animation: imageshrink 1s infinite;
+    -moz-animation: imageshrink 1s infinite;
+    -o-animation: imageshrink 1s infinite;
+    animation: imageshrink 1s infinite;
+  }
+
 }
   
 @-webkit-keyframes imageshrink {
@@ -1793,13 +1809,14 @@ h1 {
   background-size: 200px 167px;
   width: 200px;
   height: 167px;
-}
 
-.clickmebuttonfun:active { 
-  background-image: url("/images/scaryface.jpg");
-  background-size: 960px 460px;
-  width: 960px;
-  height: 460px;
+  &:active {
+    background-image: url("/images/scaryface.jpg");
+    background-size: 960px 460px;
+    width: 960px;
+    height: 460px;
+  }
+
 }
 
 .sleepy {
@@ -1809,11 +1826,13 @@ h1 {
   background-size: 400px 260px;
   width: 400px;
   height: 260px;
+
+  &:hover {
+    background-image: url("/images/drunk.gif");
+  }
+
 }
 
-.sleepy:hover { 
-  background-image: url("/images/drunk.gif");
-}
 
 .thirty {
   margin-left: auto;
@@ -1826,12 +1845,12 @@ h1 {
   -moz-transition: all 2s ease;
   -o-transition: all 2s ease;
   transition: all 2s ease;
-}
 
-.thirty:hover { 
-  background-image: url("/images/fuckthisshit.gif");
-  background-size: 1000px 213px;
-  width: 1000px;
-  height: 213px;
-  
+  &:hover {
+    background-image: url("/images/fuckthisshit.gif");
+    background-size: 1000px 213px;
+    width: 1000px;
+    height: 213px;
+  }
+
 }
