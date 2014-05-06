@@ -27,17 +27,18 @@ h1 {
   -moz-transition: all 0.1s;
   -o-transition: all 0.1s;
 	transition: all 0.1s;
-}
 
-.button:hover {
-	margin-top: 23px;
-	height: 47px;
-  box-shadow: inset 0px -3px 00px black;
-}
+  &:hover {
+    margin-top: 23px;
+    height: 47px;
+    box-shadow: inset 0px -3px 00px black;
+  }
 
-.button:active {
-	margin-top: 23px;
-  box-shadow: inset 0px 3px 00px black;
+  &:active {
+    margin-top: 23px;
+    box-shadow: inset 0px 3px 00px black;
+  }
+
 }
 
 .examplename {
@@ -63,14 +64,15 @@ h1 {
   background: #fb0712;
   width: 180px;
   height: 135px;
-}
 
-.example1:hover {
-  background-color: #de04ff;
-  -webkit-transition: background-color 2s ease-out;
-  -moz-transition: background-color 2s ease-out;
-  -o-transition: background-color 2s ease-out;
-  transition: background-color 2s ease-out;
+  &:hover {
+    background-color: #de04ff;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+  }
+
 }
 
 .righttoleft {
@@ -208,12 +210,12 @@ h1 {
   -moz-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
-}
 
-.squarecircle:active {
-  background: #000000;
-  border-radius: 0px;
-  
+  &:active {
+    background: #000000;
+    border-radius: 0px;
+  }
+
 }
 
 .rotate {
@@ -228,15 +230,16 @@ h1 {
   -o-transition: width 2s, height 2s, background-image 2s, -o-transform 2s, margin-left 2s;
   transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
 
-}
-.rotate:active {
-  background-image: url("/images/madagascar.png");
-  width: 200px; 
-  height: 200px;
-  -webkit-transform: rotate(2890deg);
-  -moz-transform: rotate(2890deg);
-  -o-transform: rotate(2890deg);
-  transform: rotate(2890deg);
+  &:active {
+    background-image: url("/images/madagascar.png");
+    width: 200px; 
+    height: 200px;
+    -webkit-transform: rotate(2890deg);
+    -moz-transform: rotate(2890deg);
+    -o-transform: rotate(2890deg);
+    transform: rotate(2890deg);
+  }
+
 }
 
 .miley {
@@ -250,13 +253,14 @@ h1 {
   -moz-transition: all 2s ease;
   -o-transition: all 2s ease;
   transition: all 2s ease;
-}
 
-.miley:hover{
-  position: relative;
-  width: 140px; 
-  height: 150px;
-  border: 10px solid rgba(0, 0, 0, 0.7);
+  &:hover {
+    position: relative;
+    width: 140px; 
+    height: 150px;
+    border: 10px solid rgba(0, 0, 0, 0.7);
+  }
+
 }
 
 .graph {
@@ -340,19 +344,18 @@ h1 {
 }
 
 .roll {
-    margin-left: 0%;
-    margin-right: auto;
-    background-image: url("/images/clickme.png");
-    background-size: cover;
-    width: 100px; 
-    height: 100px;
-    -webkit-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
-    -moz-transition: width 2s, height 2s, background-image 2s, -moz-transform 2s, margin-left 2s;
-    -o-transition: width 2s, height 2s, background-image 2s, -o-transform 2s, margin-left 2s;
-    transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
-}
+  margin-left: 0%;
+  margin-right: auto;
+  background-image: url("/images/clickme.png");
+  background-size: cover;
+  width: 100px; 
+  height: 100px;
+  -webkit-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
+  -moz-transition: width 2s, height 2s, background-image 2s, -moz-transform 2s, margin-left 2s;
+  -o-transition: width 2s, height 2s, background-image 2s, -o-transform 2s, margin-left 2s;
+  transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
 
-.roll:active {
+  &:active {
     margin-left: 75%;
     background-image: url("/images/madagascar.png");
     width: 200px; 
@@ -361,6 +364,8 @@ h1 {
     -moz-transform: rotate(2890deg);
     -o-transform: rotate(2890deg);
     transform: rotate(2890deg);
+    }
+
 }
 
 .fallingwoman {
@@ -433,11 +438,12 @@ h1 {
   -moz-transition: all 3s;
   -o-transition: all 3s;
   transition: all 3s;
-}
 
-.triangle:hover {
-  background-color: #479fe2;
-  border-radius: 5px;
+  &:hover {
+    background-color: #479fe2;
+    border-radius: 5px;
+  }
+
 }
 
 .flash {
@@ -446,20 +452,30 @@ h1 {
   background-image: url("/images/flash.jpg");
   width: 200px;
   height: 200px;
-}
 
-.flash:hover {
-  margin-left: auto;  
-  margin-right: auto;
-  background-image: url("/images/flash.jpg");
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -webkit-animation: flash normal .3s infinite ease-in-out;
-  -moz-animation: flash normal .3s infinite ease-in-out;
-  -o-animation: flash normal .3s infinite ease-in-out;
-  animation: flash normal .3s infinite ease-in-out;
+  &:hover {
+    margin-left: auto;  
+    margin-right: auto;
+    background-image: url("/images/flash.jpg");
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-animation: flash normal .3s infinite ease-in-out;
+    -moz-animation: flash normal .3s infinite ease-in-out;
+    -o-animation: flash normal .3s infinite ease-in-out;
+    animation: flash normal .3s infinite ease-in-out;
+  }
+
+  &:active {
+    margin-left: 100%;  
+    background-image: url("/images/flash.jpg");
+    -webkit-animation-name: flashout;
+    -moz-animation-name: flashout;
+    -o-animation-name: flashout;
+    animation-name: flashout;
+  }
+
 }
 
 @-webkit-keyframes flash {
@@ -520,15 +536,6 @@ h1 {
     opacity: 1;
   }
 
-}
-
-.flash:active {
-  margin-left: 100%;  
-  background-image: url("/images/flash.jpg");
-  -webkit-animation-name: flashout;
-  -moz-animation-name: flashout;
-  -o-animation-name: flashout;
-  animation-name: flashout;
 }
     
 @-webkit-keyframes flashout {
@@ -600,8 +607,8 @@ h1 {
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
-}
 
+}
 
 .blackandwhite  {
   margin-left: auto;
@@ -1237,7 +1244,6 @@ h1 {
 
 .hover {
   margin: 0 auto;
-  margin-bottom: 250px;
   width: 400px;
   height: 400px;
   -webkit-transition: all 1s ease-in-out;
@@ -1247,16 +1253,16 @@ h1 {
 }
 
 .hoverinside {
-  -webkit-animation: hover 1s infinite;
-  -moz-animation: hover 1s infinite;
-  -o-animation: hover 1s infinite;
-  animation: hover 1s infinite;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 
   &:hover {
-    -webkit-animation: hover 1s infinite;
-    -moz-animation: hover 1s infinite;
-    -o-animation: hover 1s infinite;
-    animation: hover 1s infinite;
+    -webkit-animation: hover 3s infinite;
+    -moz-animation: hover 3s infinite;
+    -o-animation: hover 3s infinite;
+    animation: hover 3s infinite;
   }
 
 }
@@ -1266,8 +1272,16 @@ h1 {
     margin-top: 100px;
   }
 
-  50% {
+  25% {
     margin-top: 0px;
+  }
+
+  50% {
+    margin-top: 100px; 
+  }
+
+  75% {
+    margin-top: 0px; 
   }
 
   100% {
@@ -1832,7 +1846,6 @@ h1 {
   }
 
 }
-
 
 .thirty {
   margin-left: auto;
